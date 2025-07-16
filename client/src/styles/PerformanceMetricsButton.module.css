@@ -1,0 +1,24 @@
+.metricsButton {
+  padding: 14px 22px; /* Larger button */
+  background-color: #50fa7b; /* Green button */
+  color: #282a36; /* Dark text for contrast */
+  border: none;
+  border-radius: 12px; /* More rounded */
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 25px; /* Increased margin */
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+
+  &:hover {
+    background-color: #69f0ae; /* Lighter green on hover */
+    transform: translateY(-3px); /* More pronounced lift */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+}

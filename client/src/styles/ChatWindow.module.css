@@ -1,0 +1,97 @@
+.chatWindow {
+  height: 450px; /* Slightly taller chat window */
+  background-color: rgba(28, 28, 40, 0.8); /* Even darker transparent background for chat area */
+  border-radius: 18px; /* More rounded corners */
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Slightly larger gap between messages */
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5); /* Deeper inner shadow */
+  border: 1px solid rgba(255, 255, 255, 0.06); /* Subtle border */
+  margin-bottom: 20px;
+
+  /* Custom Scrollbar for dark theme */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #6272a4; /* Blueish scrollbar */
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #8be9fd; /* Lighter blue on hover */
+  }
+}
+
+.noMessages {
+  color: rgba(248, 248, 242, 0.5); /* Faded light text */
+  text-align: center;
+  margin-top: 50px;
+  font-style: italic;
+}
+
+.messageBubble {
+  max-width: 80%; /* Wider bubbles */
+  padding: 14px 20px; /* Larger padding */
+  border-radius: 25px; /* More rounded */
+  position: relative;
+  font-size: 1em;
+  line-height: 1.4;
+  word-wrap: break-word;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Enhanced shadow for bubbles */
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+
+  &:hover {
+    transform: translateY(-3px); /* More pronounced lift on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  }
+}
+
+.sent {
+  align-self: flex-end;
+  background: linear-gradient(135deg, #50fa7b, #8be9fd); /* Green-blue gradient for sent */
+  color: #282a36; /* Dark text for contrast */
+  border-bottom-right-radius: 8px; /* Tail effect */
+}
+
+.received {
+  align-self: flex-start;
+  background: linear-gradient(135deg, #ff79c6, #bd93f9); /* Pink-purple gradient for received */
+  color: #f8f8f2; /* Light text */
+  border-bottom-left-radius: 8px; /* Tail effect */
+}
+
+.senderMac {
+  font-size: 0.8em; /* Slightly larger font */
+  color: rgba(40, 42, 54, 0.7); /* Darker for contrast on light bubble */
+  margin-bottom: 5px;
+  display: block;
+}
+.received .senderMac {
+  color: rgba(248, 248, 242, 0.7); /* Lighter for contrast on dark bubble */
+}
+
+
+.messageContent {
+  margin: 0;
+  padding: 0;
+}
+
+.messageTimestamp {
+  font-size: 0.75em; /* Slightly larger timestamp */
+  color: rgba(248, 248, 242, 0.6); /* Faded light text for timestamp */
+  margin-top: 5px;
+  display: block;
+  text-align: right;
+}
+.sent .messageTimestamp {
+  color: rgba(40, 42, 54, 0.6); /* Darker for contrast on light bubble */
+}
